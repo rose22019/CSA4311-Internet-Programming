@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Railway Booking System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #84fab0, #8fd3f4);
+            animation: backgroundAnimation 8s infinite alternate;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        @keyframes backgroundAnimation {
+            0% { background: linear-gradient(120deg, #84fab0, #8fd3f4); }
+            50% { background: linear-gradient(120deg, #fbc2eb, #a18cd1); }
+            100% { background: linear-gradient(120deg, #84fab0, #8fd3f4); }
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            animation: textGlow 1.5s infinite alternate;
+        }
+
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 10px #84fab0; }
+            100% { text-shadow: 0 0 20px #8fd3f4; }
+        }
+
+        input, select, button {
+            margin: 10px;
+            padding: 10px;
+            width: 90%;
+            max-width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            background: #84fab0;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        button:hover {
+            background: #8fd3f4;
+            transform: scale(1.05);
+        }
+
+        .form-section {
+            margin-top: 20px;
+        }
+
+        .animated-button {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Online Railway Booking</h1>
+        
+        <!-- Login Section -->
+        <div class="form-section">
+            <h2>Login</h2>
+            <form>
+                <input type="text" placeholder="Enter Username" required><br>
+                <input type="password" placeholder="Enter Password" required><br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        
+        <!-- Booking and Cancellation Section -->
+        <div class="form-section">
+            <h2>Book or Cancel Tickets</h2>
+            <form>
+                <label for="date">Select Date:</label><br>
+                <input type="date" id="date" name="date" required><br>
+                
+                <button class="animated-button" type="submit">Book Ticket</button>
+                <button class="animated-button" type="button" style="background: #ff6f61;">Cancel Ticket</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
